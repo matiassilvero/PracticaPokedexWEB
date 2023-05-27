@@ -22,5 +22,7 @@ namespace dominio
         public string UrlImagen { get; set; }
         public Elemento Tipo { get; set; }
         public Elemento Debilidad { get; set; }
+
+        public bool Activo { get; set; }//Agregamos esta propiedad xq nos sirve para cuando Inactivamos los Pokemons
     }
 }

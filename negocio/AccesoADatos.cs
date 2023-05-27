@@ -29,6 +29,13 @@ namespace negocio
             comando.CommandText = consulta;
         }
 
+        //esto lo agrego para usar mi STORE PROCEDURE. Yo necesito q me setee el comando como Store Procedure
+        public void setearProcedimiento(string sp)//recibe un string sp
+        {
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.CommandText = sp;//le asignamos lo q recibimos por parametro
+        }
+
         public void ejecutarLectura()
         {//este metodo realiza la lectura y la guarda en el lector
             comando.Connection = conexion;
